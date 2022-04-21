@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <h4 v-if="title !== undefined">{{ title }}</h4>
         <h4 v-else>Заголовок по умолчанию</h4>
         <select id="mainList" v-model="selectedBreeds" :style="styles" multiple>
@@ -8,7 +8,7 @@
             </option>
         </select>
         <h3>Выбранные породы</h3>
-        <BreedSelectListWithoutData :breeds="this.selectedBreeds" />
+        <BreedSelectListWithoutData :breeds="this.selectedBreeds" :styles="styles"/>
     </div>
 </template>
 

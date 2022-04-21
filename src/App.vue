@@ -1,15 +1,27 @@
 <template>
-    <h1>Задание 1</h1>
-    <BreedSelectList/>
+  <div class="wrapper">
+    <div class="block-first">
+      <div class="container-el">
+        <h1>Задание 1</h1>
+        <BreedSelectList/>
+      </div>
+      <div class="container-el">
+        <h1>Задание 3</h1>
+        <BreedSelectListWIthSelectedList :breeds="Object.keys(allBreeds)" title="Второй заголовок" :styles=this.styleObject />
+      </div>
+    </div>
+    <div class="block-second">
+      <div class="container-el">
+        <h1>Задание 2</h1>
+        <BreedSelectListWithoutData :breeds="Object.keys(allBreeds)" title="Заголовок" :styles=this.styleObject />
+      </div>
 
-    <h1>Задание 2</h1>
-    <BreedSelectListWithoutData :breeds="Object.keys(allBreeds)" title="Заголовок" :styles=this.styleObject />
-
-    <h1>Задание 3</h1>
-    <BreedSelectListWIthSelectedList :breeds="Object.keys(allBreeds)" title="Второй заголовок" :styles=this.styleObject />
-
-    <h1>Задание 5</h1>
-    <BreedCustomListTask5 :breeds="Object.keys(allBreeds)" />
+      <div class="container-el">
+        <h1>Задание 5</h1>
+        <BreedCustomListTask5 :breeds="Object.keys(allBreeds)" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -32,7 +44,11 @@ export default {
             allBreeds: [],
             styleObject: {
                 color: 'red',
-                fontSize: '20px'
+                fontSize: '20px',
+                padding: '10px',
+                backgroundColor: '#fff',
+                width: '300px',
+                height: '300px'
             }
         }
     },
@@ -57,5 +73,11 @@ export default {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+}
+.wrapper{
+  display: flex;
+  width: 1400px;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 </style>

@@ -1,11 +1,9 @@
 <template>
-    <div>
-        <select multiple>
+        <select multiple class="lab1">
             <option v-for="breed in Object.keys(this.allBreeds)" :key="breed.message">
                 {{ breed }}
             </option>
         </select>
-    </div>
 </template>
 
 <script>
@@ -33,9 +31,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-
-select {
-    height: 300px;
+.lab1{
+  font-size: 20px;
+  padding: 10px;
+  background-color: #fff;
+  width: 300px;
+  height: 300px;
 }
-
 </style>
